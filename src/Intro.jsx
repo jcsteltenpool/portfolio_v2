@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import PrimaryButton from './components/PrimaryButton'
+
 
 export default function Intro() {
     const [introText, setIntroText] = useState('Joost Steltenpool')
@@ -19,12 +21,15 @@ export default function Intro() {
     }, [counter])
     
     return (
-        <div className='intro__container'>
+        <section className='intro__container'>
             <h1 className='intro'>
-                <span className='intro-large'>Hoi,</span>
-                <span className='intro-2'>ik ben </span>
-                <span className='intro-alt'>{introText}</span>
+                <span className='intro-large'>Hi,</span>
+                <span>ik ben </span>
+                <span className='intro-cycle'>{introText}</span>
             </h1>
-        </div>
+            <PrimaryButton 
+                buttonText="Neem contact met me op"
+            />
+        </section>
     )
 }
