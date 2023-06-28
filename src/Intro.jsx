@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import PrimaryButton from './components/PrimaryButton'
-
 
 export default function Intro() {
     const [introText, setIntroText] = useState('Joost Steltenpool')
@@ -27,9 +25,11 @@ export default function Intro() {
                 <span>ik ben </span>
                 <span className='intro-cycle'>{introText}</span>
             </h1>
-            <PrimaryButton 
-                buttonText="Neem contact met me op"
-            />
+            <a href="mailto:mail@jooststeltenpool.nl">
+                <button className='button primary-button'>
+                    Neem contact met me op
+                </button>
+            </a>
         </section>
     )
 }

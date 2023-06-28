@@ -31,8 +31,6 @@
   background-clip: padding-box;
   border-radius: 100vw;
   font-weight: bold;
-  /* text-transform: uppercase; */
-  /* text-decoration: none; */
   white-space: nowrap;
   transition: transform 0.2s ease-out;
   touch-action: manipulation;
@@ -53,7 +51,7 @@
 }
 
 h1 {
-  font-size: min(4em, 9vw);
+  font-size: min(4em, 8.5vw);
   line-height: 1.1;
   white-space: nowrap;
 }
