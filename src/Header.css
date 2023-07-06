@@ -1,0 +1,40 @@
+.primary-nav-button {
+    position:relative;
+    z-index: 999;
+}
+
+/* .primary-nav-hamburger {
+    fill: #333;
+} */
+
+.primary-nav-button .line {
+    transition: 
+        rotate 100ms ease-in,
+        transform 100ms ease-in 100ms,
+        opacity 0ms 100ms;
+    ;
+    transform-origin: center;
+}
+
+.primary-nav-button[aria-expanded="true"] .line {
+    fill: #edeae1;
+    transition: 
+        transform 100ms ease-in,
+        rotate 100ms ease-in 100ms,
+        opacity 0ms 100ms;
+    ;
+}
+
+.primary-nav-button[aria-expanded="true"] .top {
+    rotate: 45deg;
+    transform: translateY(20px);
+}
+  
+.primary-nav-button[aria-expanded="true"] .middle {
+    opacity: 0;
+}
+
+.primary-nav-button[aria-expanded="true"] .bottom {
+    rotate: -45deg;
+    transform: translateY(-20px);
+}
