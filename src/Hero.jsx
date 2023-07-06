@@ -32,9 +32,9 @@ export default function Hero() {
                     <ContactButton />
                 </div>
                 
-            {/* <div className='pointer__container flex'>
+            <div className='pointer__container flex'>
                 <span className='pointer'></span>
-            </div> */}
+            </div>
             </section>
         </>
     )

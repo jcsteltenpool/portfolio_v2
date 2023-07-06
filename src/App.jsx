@@ -45,15 +45,15 @@ console.log(aboutHeight)
 
   return (
     <>
-      {/* <Header aboutTop={aboutTop}
-              aboutHeight={aboutHeight}/> */}
+      <Header aboutTop={aboutTop}
+              aboutHeight={aboutHeight}/>
       <main>
         <Intro />
-        {/* <Projects />
+        <Projects />
         <Skills/>
         <About height={size.height}
               handleChange={handleViewportChange}/>
-        <Contact/> */}
+        <Contact/>
       </main>
       <Footer/>
     </>
