@@ -34,16 +34,16 @@ export default function About(props) {
 
     return (
         <section id='about' className={`wrapper about__container ${inViewport && 'active'}`} ref={viewPortRef}>
-            <div className="about__content">
                 <h2 className={`section__title about__title ${inViewport && 'active'}`}>Over mij</h2>
-                <p>In het werk als front-end developer komt alles samen waar ik van hou: creatief bezig zijn, problemen oplossen, verbindingen leggen en net zolang puzzelen tot elke pixel op de juiste plaats staat.</p>          
-                <p>Van jongs af aan ben ik een echte maker. Als kind was ik altijd aan het tekenen en schilderen en toen ik wat ouder werd richtte ik mij meer op het schrijven, het spelen en maken van theater, muziek en liedteksten.
-                    <br/>Daarnaast ben ik heel nieuwsgierig en heb ik een analytische kant die wil weten hoe dingen werken. 
-                    <br/>Dit alles neem ik mee in het bouwen van mooie, toffe websites en webapplicaties.
-                </p>
-                <p>Wil je meer over me weten?</p>
-                <ContactButton/>
-            </div>
+                <div className="about__content">
+                    <p>In het werk als front-end developer komt alles samen waar ik van hou: creatief bezig zijn, problemen oplossen, verbindingen leggen en net zolang puzzelen tot elke pixel op de juiste plaats staat.</p>          
+                    <p>Van jongs af aan ben ik een echte maker. Als kind was ik altijd aan het tekenen en schilderen en toen ik wat ouder werd richtte ik mij meer op het schrijven, het spelen en maken van theater, muziek en liedteksten.
+                        <br/>Daarnaast ben ik heel nieuwsgierig en heb ik een analytische kant die wil weten hoe dingen werken. 
+                        <br/>Dit alles neem ik mee in het bouwen van mooie, toffe websites en webapplicaties.
+                    </p>
+                    <p>Wil je meer over me weten?</p>
+                    <ContactButton/>
+                </div>
         </section>
     )
 }

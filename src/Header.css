@@ -3,10 +3,6 @@
     z-index: 999;
 }
 
-/* .primary-nav-hamburger {
-    fill: #333;
-} */
-
 .primary-nav-button .line {
     transition: 
         rotate 100ms ease-in,

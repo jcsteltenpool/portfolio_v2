@@ -21,23 +21,23 @@ export default function Skills() {
         
             <div className="skills-background__container">
                 <Parallax speed={10}
-                          opacity={[0, 1, 'easeOut']}>
+                          opacity={[0.3, 1, 'easeOut']}>
                     <span className="skill__back" data-skill="html">HTML5</span>
                 </Parallax>
                 <Parallax speed={5}
-                          opacity={[0, 1, 'easeOut']}>
+                          opacity={[0.3, 1, 'easeOut']}>
                     <span  className="skill__back" data-skill="javascript">JavaScript</span>
                 </Parallax>
                 <Parallax speed={0}
-                          opacity={[0, 1, 'easeOut']}>
+                          opacity={[0.3, 1, 'easeOut']}>
                     <span className="skill__back" data-skill="react">React</span>
                 </Parallax>
                 <Parallax speed={0}
-                          opacity={[0, 1, 'easeOut']}>
+                          opacity={[0.3, 1, 'easeOut']}>
                     <span className="skill__back" data-skill="css">CSS3</span>
                 </Parallax>
                 <Parallax speed={10}
-                          opacity={[0, 1, 'easeOut']}>
+                          opacity={[0.3, 1, 'easeOut']}>
                     <span className="skill__back" data-skill="elementor">Elementor</span>
                 </Parallax>    
             </div>
