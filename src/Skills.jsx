@@ -12,7 +12,7 @@ export default function Skills() {
     const viewPortRef = useRef();
 
      // let options = { treshold: 0.5 };
-     const { inViewport } = useInViewport(viewPortRef,);
+     const { inViewport } = useInViewport(viewPortRef);
 
     return (
         <section className={`wrapper skills__wrapper ${inViewport && 'active'}`} ref={viewPortRef}>
@@ -22,53 +22,54 @@ export default function Skills() {
             <div className="skills-background__container">
                 <Parallax speed={10}
                           opacity={[0, 1, 'easeOut']}>
-                    <span style={{paddingTop: 200}} className="skill__back" data-skill="html">HTML5</span>
+                    <span className="skill__back" data-skill="html">HTML5</span>
                 </Parallax>
                 <Parallax speed={5}
                           opacity={[0, 1, 'easeOut']}>
-                    <span style={{paddingTop: 100}}className="skill__back" data-skill="js">JavaScript</span>
+                    <span  className="skill__back" data-skill="javascript">JavaScript</span>
                 </Parallax>
-                <Parallax speed={-10}
+                <Parallax speed={0}
                           opacity={[0, 1, 'easeOut']}>
                     <span className="skill__back" data-skill="react">React</span>
                 </Parallax>
                 <Parallax speed={0}
                           opacity={[0, 1, 'easeOut']}>
-                    <span style={{paddingTop: 300}}className="skill__back" data-skill="css">CSS3</span>
+                    <span className="skill__back" data-skill="css">CSS3</span>
                 </Parallax>
                 <Parallax speed={10}
                           opacity={[0, 1, 'easeOut']}>
-                    <span style={{paddingTop: 150}} className="skill__back" data-skill="elementor">Elementor</span>
+                    <span className="skill__back" data-skill="elementor">Elementor</span>
                 </Parallax>    
             </div>
+            
             <div className="skills__container">
-                <Parallax speed={-5}
+                <Parallax speed={5}
                         opacity={[0, 1, 'easeOut']}>
-                        <div style={{paddingTop: '40vh'}} className='skill'>
+                        <div className='skill__icon' data-skill="html">
                             <HTML5 className="svg__icon"/>
                         </div>
                 </Parallax>
                 <Parallax speed={0}
                         opacity={[0, 1, 'easeOut']}>
-                        <div style={{paddingBottom: 40}} className='skill'>
+                        <div className='skill__icon' data-skill="javascript">
                             <Javascript className="svg__icon"/>
                         </div>
                 </Parallax>
-                <Parallax speed={-10}
+                <Parallax speed={-5}
                         opacity={[0, 1, 'easeOut']}>
-                        <div style={{paddingTop: 0}} className='skill'>
+                        <div className='skill__icon' data-skill="react">
                             <React className="svg__icon"/>
                         </div>
                 </Parallax>
                 <Parallax speed={5}
                         opacity={[0, 1, 'easeOut']}>
-                        <div style={{paddingTop: 200}} className='skill'>
+                        <div className='skill__icon' data-skill="css">
                             <CSS3 className="svg__icon"/>
                         </div>
                 </Parallax>
-                <Parallax speed={15}
+                <Parallax speed={10}
                         opacity={[0, 1, 'easeOut']}>
-                        <div style={{paddingTop: '50vh'}} className='skill'>
+                        <div className='skill__icon' data-skill="elementor">
                             <Elementor className="svg__icon"/>
                         </div>
                 </Parallax>

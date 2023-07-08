@@ -405,7 +405,7 @@ body {
   flex-direction: column;
   justify-content: center;
   /* min-height: 2000px; */
-  height: 200vh;
+  height: 150vh;
 }
 
 .skills__container {
@@ -416,9 +416,10 @@ body {
   justify-content: space-between;
 }
 
-.skill > .svg__icon {
+.skill__icon {
   fill: var(--accent-clr);
   width: 16vw;
+  max-width: 7rem;
   z-index: 99;
   isolation: isolate;
 }
@@ -457,17 +458,41 @@ body {
   z-index: 0;
 }
 
-.skill__back [data-skill="html"] {
-  right: 100px;
+
+.skill__icon[data-skill="html"] {
+  padding-bottom: 200px;
 }
-.skill__back[data-skill="js"] {
+.skill__back[data-skill="html"] {
+  left: 0;
+  bottom: 8rem;
+}
+
+.skill__icon[data-skill="javascript"] {
+  padding-top: 200px;
+}
+.skill__back[data-skill="javascript"] {
+  bottom: 0;
   left: -80px;
 }
+
+.skill__icon[data-skill="react"] {
+  padding-bottom: 400px;
+}
 .skill__back[data-skill="react"] {
+  bottom: 220px;
   left: -60px;
 }
+
+.skill__icon[data-skill="css"] {
+  padding-top: 0;
+}
 .skill__back[data-skill="css"] {
+  bottom: 8rem;
   right: -30px;
+}
+
+.skill__icon[data-skill="elementor"] {
+  padding-top: 220px;
 }
 .skill__back[data-skill="elementor"] {
   right: 0;
