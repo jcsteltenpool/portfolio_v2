@@ -15,7 +15,7 @@ export default function Skills() {
      const { inViewport } = useInViewport(viewPortRef);
 
     return (
-        <section className={`wrapper skills__wrapper ${inViewport && 'active'}`} ref={viewPortRef}>
+        <section id='skills' className={`wrapper skills__wrapper ${inViewport && 'active'}`} ref={viewPortRef}>
             
             <h2 className="section__title">Vaardigheden</h2>
         

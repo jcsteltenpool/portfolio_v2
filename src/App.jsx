@@ -1,15 +1,15 @@
 import { useState, useEffect} from 'react';
 import { useWindowSize } from "@uidotdev/usehooks";
 
-
-import './App.css';
-import Intro from './Hero';
 import Header from './Header';
+import Intro from './Hero';
 import Projects from './Projects';
 import Skills from './Skills';
 import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
+
+import './App.css';
 
 export default function App() {
   const size = useWindowSize();
@@ -40,8 +40,8 @@ export default function App() {
 
   return (
     <>
-      {/* <Header aboutTop={aboutTop}
-              aboutHeight={aboutHeight}/> */}
+      <Header aboutTop={aboutTop}
+              aboutHeight={aboutHeight}/>
       <main>
         <Intro />
         <Projects />

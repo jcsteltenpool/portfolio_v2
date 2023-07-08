@@ -33,7 +33,7 @@ export default function About(props) {
     }, [viewPortRef, height, handleChange])
 
     return (
-        <section className={`wrapper about__container ${inViewport && 'active'}`} ref={viewPortRef}>
+        <section id='about' className={`wrapper about__container ${inViewport && 'active'}`} ref={viewPortRef}>
             <div className="about__content">
                 <h2 className={`section__title about__title ${inViewport && 'active'}`}>Over mij</h2>
                 <p>In het werk als front-end developer komt alles samen waar ik van hou: creatief bezig zijn, problemen oplossen, verbindingen leggen en net zolang puzzelen tot elke pixel op de juiste plaats staat.</p>          

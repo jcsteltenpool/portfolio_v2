@@ -18,7 +18,7 @@ export default function Contact() {
     );
 
     return (
-        <section className={`wrapper contact__container ${inViewport && 'active'}`} ref={viewPortRef}>
+        <section id='contact' className={`wrapper contact__container ${inViewport && 'active'}`} ref={viewPortRef}>
             <h2 className="section__title contact__title">Contact</h2>
             <div className="contact__content">
                 <div className="contact__group">

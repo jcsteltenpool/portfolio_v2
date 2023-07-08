@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import { NavHashLink } from 'react-router-hash-link';
 import './Header.css'
 
 export default function Header(props) {
@@ -39,10 +40,30 @@ export default function Header(props) {
             <nav>
                 <ul id="primary-navigation"
                     data-visible={visible} className="primary-navigation flex">
-                    <li>Projecten</li>
-                    <li>Vaardigheden</li>
-                    <li>Over mij</li>
-                    <li>Contact</li>
+                    <li>
+                        <NavHashLink to="#projects"
+                                     onClick={handleClick}>
+                            Projecten
+                        </NavHashLink>
+                    </li>
+                    <li>
+                        <NavHashLink to="#skills"
+                                     onClick={handleClick}>
+                            Vaardigheden
+                        </NavHashLink>
+                    </li>
+                    <li>
+                        <NavHashLink to="#about"
+                                     onClick={handleClick}>
+                            Over mij
+                        </NavHashLink>
+                    </li>
+                    <li>
+                        <NavHashLink to="#contact"
+                                     onClick={handleClick}>
+                            Contact
+                        </NavHashLink>
+                    </li>
                 </ul>
             </nav>
         </header>
