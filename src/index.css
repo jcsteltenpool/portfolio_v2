@@ -404,8 +404,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 2000px;
-  height: 250vh;
+  /* min-height: 2000px; */
+  height: 200vh;
 }
 
 .skills__container {

@@ -20,29 +20,29 @@ export default function Skills() {
             <h2 className="section__title">Vaardigheden</h2>
         
             <div className="skills-background__container">
-                <Parallax speed={20}
+                <Parallax speed={10}
                           opacity={[0, 1, 'easeOut']}>
                     <span style={{paddingTop: 200}} className="skill__back" data-skill="html">HTML5</span>
                 </Parallax>
-                <Parallax speed={10}
+                <Parallax speed={5}
                           opacity={[0, 1, 'easeOut']}>
-                    <span style={{paddingTop: 0}}className="skill__back" data-skill="js">JavaScript</span>
+                    <span style={{paddingTop: 100}}className="skill__back" data-skill="js">JavaScript</span>
                 </Parallax>
-                <Parallax speed={-20}
+                <Parallax speed={-10}
                           opacity={[0, 1, 'easeOut']}>
                     <span className="skill__back" data-skill="react">React</span>
                 </Parallax>
-                <Parallax speed={5}
+                <Parallax speed={0}
                           opacity={[0, 1, 'easeOut']}>
-                    <span style={{paddingTop: 400}}className="skill__back" data-skill="css">CSS3</span>
+                    <span style={{paddingTop: 300}}className="skill__back" data-skill="css">CSS3</span>
                 </Parallax>
-                <Parallax speed={15}
+                <Parallax speed={10}
                           opacity={[0, 1, 'easeOut']}>
                     <span style={{paddingTop: 150}} className="skill__back" data-skill="elementor">Elementor</span>
                 </Parallax>    
             </div>
             <div className="skills__container">
-                <Parallax speed={-15}
+                <Parallax speed={-5}
                         opacity={[0, 1, 'easeOut']}>
                         <div style={{paddingTop: '40vh'}} className='skill'>
                             <HTML5 className="svg__icon"/>
@@ -54,13 +54,13 @@ export default function Skills() {
                             <Javascript className="svg__icon"/>
                         </div>
                 </Parallax>
-                <Parallax speed={-20}
+                <Parallax speed={-10}
                         opacity={[0, 1, 'easeOut']}>
                         <div style={{paddingTop: 0}} className='skill'>
                             <React className="svg__icon"/>
                         </div>
                 </Parallax>
-                <Parallax speed={-20}
+                <Parallax speed={5}
                         opacity={[0, 1, 'easeOut']}>
                         <div style={{paddingTop: 200}} className='skill'>
                             <CSS3 className="svg__icon"/>
