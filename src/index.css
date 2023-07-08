@@ -282,6 +282,7 @@ body {
 .projects__wrapper,
 .about__container,
 .contact__container {
+  transition: opacity 0.5s ease-out;
   opacity: 0;
 }
 
@@ -289,7 +290,7 @@ body {
 .projects__wrapper.active,
 .about__container.active,
 .contact__container.active {
-  animation: showElement 0.5s ease-out forwards;
+  opacity: 1;
 }
 
 /* PROJECTS */
@@ -315,6 +316,15 @@ body {
   gap: 1rem;
   width: 100%;
   max-width: 500px;
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.5s ease-out,
+              transform 0.5s ease-out;
+}
+
+.project.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-img__container {
@@ -362,11 +372,6 @@ body {
   opacity: 0.8;
 }
 
-/* .project li {
-  margin-left: 1rem;
-  list-style: url(./assets/svg/lightning.svg);
-} */
-
 .project li {
   position: relative;
   padding-left: 1.5rem;
@@ -392,8 +397,6 @@ body {
   gap: 1rem;
 }
 
-.project-button {
-}
 .primary-button.project-button {
   border: 2px solid var(--accent-clr);
 }
@@ -598,10 +601,6 @@ footer {
 
 /* ANIMATIONS */
 
-@keyframes showElement {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 
 
 /* MEDIA QUERIES */

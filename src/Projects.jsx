@@ -6,8 +6,12 @@ import { useInViewport} from 'react-in-viewport'
 import { projectsData } from "./assets/projectsData";
 
 const Project = ({ title, images, features, siteUrl, codeUrl, description }) => {
+    const viewPortRef = useRef();
+    
+    // let options = { treshold: 0.5 };
+    const { inViewport } = useInViewport(viewPortRef,);
     return (
-        <section className="project">
+        <section className={`project ${inViewport ? 'active' : ''}`} ref={viewPortRef}>
             <div className="project-img__container">
                 {images.movie 
                     ? <video autoPlay loop muted playsInline src={images.movie} className="project-img__mobile"></video>
@@ -54,7 +58,7 @@ export default function Projects() {
     const { inViewport } = useInViewport(viewPortRef,);
 
     return (
-        <section className={`wrapper projects__wrapper ${inViewport && 'active'}`} ref={viewPortRef}>
+        <section className={`wrapper projects__wrapper ${inViewport ? 'active' : ''}`} ref={viewPortRef}>
             <h2 className="section__title">Projecten</h2>
             <div className="projects__container">
                 {projectsData.map(( { title, images, features, siteUrl, codeUrl, description }, index) => 

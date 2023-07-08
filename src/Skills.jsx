@@ -75,19 +75,19 @@ export default function Skills() {
                 </Parallax>
             </div>
             <div className="soft-skills__container">
-                <Parallax speed={-10}
+                <Parallax speed={-9}
                           opacity={[1, 0, 'easeOut']}>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">creatief</span>
                 </Parallax>
-                <Parallax speed={-8}
+                <Parallax speed={-6}
                           opacity={[1, 0, 'easeOut']}>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">oplossingsgericht</span>
                 </Parallax>
-                <Parallax speed={-6}
+                <Parallax speed={-3}
                           opacity={[1, 0, 'easeOut']}>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">analytisch</span>
                 </Parallax>
-                <Parallax speed={-4}
+                <Parallax speed={0}
                           opacity={[1, 0, 'easeOut']}>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">out of the box</span>
                 </Parallax>
