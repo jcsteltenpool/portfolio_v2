@@ -32,21 +32,16 @@ export default function App() {
 
   const [aboutTop, setAboutTop] = useState(0);
   const [aboutHeight, setAboutHeight] = useState(0)
-  // const [contactTop, setContactTop] = useState(0);
   
   const handleViewportChange = (top, height) => {
     setAboutTop(top);
     setAboutHeight(height);
   }
-console.log(aboutTop)
-console.log(aboutHeight)
-// console.log(contactTop)
-  // console.log(scrollTop)
 
   return (
     <>
-      <Header aboutTop={aboutTop}
-              aboutHeight={aboutHeight}/>
+      {/* <Header aboutTop={aboutTop}
+              aboutHeight={aboutHeight}/> */}
       <main>
         <Intro />
         <Projects />

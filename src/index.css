@@ -5,11 +5,10 @@
   
   --clr-light: #edeae1;
   --clr-dark: #333333;
-  --clr-accent-light: hsl(182, 75%, 50%);
-  --clr-accent-medium: hsl(182, 25%, 50%);
+ 
   --clr-green: #1f937c;
-  --clr-dark-green: #0f4a3e;
-  --clr-red: #f23f59;
+  --clr-light-green: hsl(168, 65%, 35%, 25%);
+  --clr-dark-green: hsl(168, 66%, 17%);
 
   --body-clr: var(--clr-light);
   --background-clr: var(--clr-dark);
@@ -39,8 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-grow: 0;
-  padding: 1rem;
-  background-clip: padding-box;
+  padding: 9px 1.4rem;
   border-radius: 100vw;
   font-weight: 500;
   white-space: nowrap;
@@ -48,9 +46,21 @@ body {
   touch-action: manipulation;
 }
 
+@media(hover:hover) {
+  .cta:hover {
+    transform: translateX(0.5rem);
+  }
+}
+
 .primary-button {
   color: var(--clr-light);
   background-color: var(--primary-button-clr);
+}
+
+.secondary-button {
+  color: var(--clr-green);
+  /* background-color: var(--clr-light-green); */
+  border: 2px solid var(--accent-clr);
 }
 
 .flex {
@@ -222,12 +232,6 @@ body {
   opacity: 0.9;
 }
 
-@media(hover:hover) {
-  .cta:hover {
-    transform: translateX(0.5rem);
-  }
-}
-
 @keyframes show-hero {
   from {
     opacity: 0;
@@ -266,20 +270,133 @@ body {
   }
 }
 
-
+/* GLOBAL SECTION SETTINGS */
 .wrapper {
   position: relative;
   padding: 1rem 0.5rem;
   min-height: 100vh;
   margin-top: 4rem;
 }
+
+.skills__wrapper,
+.projects__wrapper,
+.about__container,
+.contact__container {
+  opacity: 0;
+}
+
+.skills__wrapper.active,
+.projects__wrapper.active,
+.about__container.active,
+.contact__container.active {
+  animation: showElement 0.5s ease-out forwards;
+}
+
 /* PROJECTS */
 
-/* .projects__wrapper {
-  background-color: #edeae1;
-  z-index: 100;
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.project:nth-child(even) {
+  align-self: flex-end;
+}
+
+.project {
+  background-color: var(--clr-light-green);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.project-img__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  z-index: 2;
+}
+
+.project-img__container > * {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+}
+
+.project-img__mobile {
+  z-index: 1;
+}
+
+.project:nth-child(odd) .project-img__mobile {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 3;
+}
+
+.project:nth-child(odd) .project-img__desktop {
+  grid-column: 2 / span 5;
+  grid-row: 2 / span 3;
+}
+
+.project:nth-child(even) .project-img__mobile {
+  grid-column: 5 / span 2;
+  grid-row: 2 / span 3;
+}
+
+.project:nth-child(even) .project-img__desktop {
+  grid-column: 1 / span 5;
+  grid-row: 1 / span 3;
+}
+
+.project h3 {
+  color: var(--accent-clr)
+}
+
+.project p,
+.project li {
+  opacity: 0.8;
+}
+
+/* .project li {
+  margin-left: 1rem;
+  list-style: url(./assets/svg/lightning.svg);
 } */
 
+.project li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.project li::before {
+  content: '';
+  background-image: url(./assets/svg/lightning.svg);
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 1.1rem;
+  aspect-ratio: 1;
+}
+
+.project-button__container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-button {
+}
+.primary-button.project-button {
+  border: 2px solid var(--accent-clr);
+}
 
 /* SKILLS */
 
@@ -289,7 +406,6 @@ body {
   justify-content: center;
   min-height: 2000px;
   height: 250vh;
-  opacity: 0;
 }
 
 .skills__container {
@@ -367,25 +483,6 @@ body {
   opacity: 0;
   padding-bottom: 2rem;
 }
-
-
-.skills__wrapper,
-.projects__wrapper,
-.about__container,
-.contact__container {
-  opacity: 0;
-}
-.skills__wrapper.active,
-.projects__wrapper.active,
-.about__container.active,
-.contact__container.active {
-  animation: showElement 0.5s ease-out forwards;
-}
-
-/* .about__content {
-  position: sticky;
-  top: 1rem;
-} */
 
 .about__title {
   position: initial;
@@ -467,6 +564,7 @@ body {
 /* FOOTER */
 footer {
   margin-top: auto;
+  width: 100%;
   color: var(--clr-light);
   background-color: var(--accent-clr);
   padding: 1rem 0;

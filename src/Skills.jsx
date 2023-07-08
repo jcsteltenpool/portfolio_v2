@@ -11,17 +11,8 @@ import { ReactComponent as Elementor } from './assets/svg/elementor.svg';
 export default function Skills() {
     const viewPortRef = useRef();
 
-    let options = {       
-        treshold: 0.5 
-        // threshold: [0, 0.25, 0.5, 0.75, 1]
-    };
-
-    const {
-        inViewport
-    } = useInViewport(
-        viewPortRef,
-        options   
-    );
+     // let options = { treshold: 0.5 };
+     const { inViewport } = useInViewport(viewPortRef,);
 
     return (
         <section className={`wrapper skills__wrapper ${inViewport && 'active'}`} ref={viewPortRef}>
@@ -63,7 +54,7 @@ export default function Skills() {
                             <Javascript className="svg__icon"/>
                         </div>
                 </Parallax>
-                <Parallax speed={-30}
+                <Parallax speed={-20}
                         opacity={[0, 1, 'easeOut']}>
                         <div style={{paddingTop: 0}} className='skill'>
                             <React className="svg__icon"/>
