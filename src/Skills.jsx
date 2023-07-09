@@ -19,16 +19,17 @@ export default function Skills() {
             
             <h2 className="section__title">Vaardigheden</h2>
 
-            <div className="skills-background__container">
-            <Parallax speed={-5}
-                      opacity={[0.3, 1, 'easeOut']}>
-                    <span className="skill__back" data-skill="html">HTML5</span>
-                    <span  className="skill__back" data-skill="javascript">JavaScript</span>
-                    <span className="skill__back" data-skill="react">React</span>
-                    <span className="skill__back" data-skill="css">CSS3</span>
-                    <span className="skill__back" data-skill="elementor">Elementor</span> 
-            </Parallax>
-            </div>
+            {/* <div className="skills-bg__wrapper">
+                <Parallax className="skills-bg__container"
+                            speed={10}
+                            opacity={[0.3, 1, 'easeOut']}>
+                            <span className="skill__back" data-skill="html">HTML5</span>
+                            <span className="skill__back" data-skill="javascript">JavaScript</span>
+                            <span className="skill__back" data-skill="react">React</span>
+                            <span className="skill__back" data-skill="css">CSS3</span>
+                            <span className="skill__back" data-skill="elementor">Elementor</span> 
+                </Parallax>
+            </div> */}
             
 
             {/* <div className="skills-background__container">
@@ -55,6 +56,15 @@ export default function Skills() {
             </div> */}
             
             <div className="skills__container">
+            <Parallax className="skills-bg__container"
+                            speed={10}
+                            opacity={[0.3, 1, 'easeOut']}>
+                            <span className="skill__back" data-skill="html">HTML5</span>
+                            <span className="skill__back" data-skill="javascript">JavaScript</span>
+                            <span className="skill__back" data-skill="react">React</span>
+                            <span className="skill__back" data-skill="css">CSS3</span>
+                            <span className="skill__back" data-skill="elementor">Elementor</span> 
+                </Parallax>
                 <Parallax speed={5}
                         opacity={[0, 1, 'easeOut']}>
                         <div className='skill__icon' data-skill="html">
@@ -79,7 +89,7 @@ export default function Skills() {
                             <CSS3 className="svg__icon"/>
                         </div>
                 </Parallax>
-                <Parallax speed={10}
+                <Parallax speed={15}
                         opacity={[0, 1, 'easeOut']}>
                         <div className='skill__icon' data-skill="elementor">
                             <Elementor className="svg__icon"/>
