@@ -86,15 +86,15 @@ export default function Skills() {
                         </div>
                 </Parallax>
             </div>
-            <div className="soft-skills__container">
-                <Parallax sopacity={[1, 0, 'easeOut']}>
+            {/* <Parallax sopacity={[1, 0, 'easeOut']}>
+                <div className="soft-skills__container">
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">creatief</span>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">oplossingsgericht</span>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">analytisch</span>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">out of the box</span>
-                </Parallax>
-            </div>
-            {/* <div className="soft-skills__container">
+                </div>
+            </Parallax> */}
+            <div className="soft-skills__container">
                 <Parallax speed={-9}
                           opacity={[1, 0, 'easeOut']}>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">creatief</span>
@@ -111,7 +111,7 @@ export default function Skills() {
                           opacity={[1, 0, 'easeOut']}>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">out of the box</span>
                 </Parallax>
-            </div> */}
+            </div>
         </section>
     )
 
