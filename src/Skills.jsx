@@ -19,7 +19,7 @@ export default function Skills() {
             
             <h2 className="section__title">Vaardigheden</h2>
         
-            <div className="skills-background__container">
+            {/* <div className="skills-background__container">
                 <Parallax speed={10}
                           opacity={[0.3, 1, 'easeOut']}>
                     <span className="skill__back" data-skill="html">HTML5</span>
@@ -40,7 +40,7 @@ export default function Skills() {
                           opacity={[0.3, 1, 'easeOut']}>
                     <span className="skill__back" data-skill="elementor">Elementor</span>
                 </Parallax>    
-            </div>
+            </div> */}
             
             <div className="skills__container">
                 <Parallax speed={5}
@@ -74,7 +74,7 @@ export default function Skills() {
                         </div>
                 </Parallax>
             </div>
-            <div className="soft-skills__container">
+            {/* <div className="soft-skills__container">
                 <Parallax speed={-9}
                           opacity={[1, 0, 'easeOut']}>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">creatief</span>
@@ -91,7 +91,7 @@ export default function Skills() {
                           opacity={[1, 0, 'easeOut']}>
                     <span style={{paddingTop: 0}} className="soft-skill" data-skill="">out of the box</span>
                 </Parallax>
-            </div>
+            </div> */}
         </section>
     )
 
