@@ -57,7 +57,7 @@ export default function Skills() {
             
             <div className="skills__container">
                 <Parallax className="skills-bg__container"
-                          speed={10}
+                        //   speed={10}
                           opacity={[0.3, 1, 'easeOut']}>
                     <span className="skill__back" data-skill="html">HTML5</span>
                     <span className="skill__back" data-skill="javascript">JavaScript</span>
@@ -83,7 +83,7 @@ export default function Skills() {
                             <React className="svg__icon"/>
                         </div>
                 </Parallax>
-                <Parallax speed={5}
+                <Parallax speed={0}
                         opacity={[0, 1, 'easeOut']}>
                         <div className='skill__icon' data-skill="css">
                             <CSS3 className="svg__icon"/>
@@ -96,14 +96,7 @@ export default function Skills() {
                         </div>
                 </Parallax>
             </div>
-            {/* <Parallax sopacity={[1, 0, 'easeOut']}>
-                <div className="soft-skills__container">
-                    <span style={{paddingTop: 0}} className="soft-skill" data-skill="">creatief</span>
-                    <span style={{paddingTop: 0}} className="soft-skill" data-skill="">oplossingsgericht</span>
-                    <span style={{paddingTop: 0}} className="soft-skill" data-skill="">analytisch</span>
-                    <span style={{paddingTop: 0}} className="soft-skill" data-skill="">out of the box</span>
-                </div>
-            </Parallax> */}
+            
             <div className="soft-skills__container">
                 <Parallax speed={-9}
                           opacity={[1, 0, 'easeOut']}>

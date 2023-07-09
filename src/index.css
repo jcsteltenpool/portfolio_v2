@@ -438,7 +438,7 @@ body {
 }
 
 .soft-skill, .skill__back {
-  font-size: 8vw;
+  font-size: min(8vw, 5rem);
   font-weight: 700;
 }
 
@@ -456,7 +456,7 @@ body {
 }
 
 .skill__icon[data-skill="javascript"] {
-  padding-top: 200px;
+  padding-top: 100px;
 }
 .skill__back[data-skill="javascript"] {
   bottom: 0;
@@ -536,18 +536,15 @@ body {
 }
 
 .contact__label {
-  font-size: clamp(0.75rem, 4vw, 2rem);
+  font-size: clamp(0.75rem, 4vw, 3vh);
   font-weight: 500;
   opacity: 0.8;
 }
 
 .contact__details {
-  font-size: clamp(1rem, 7vw, 3rem);
-  font-weight: 500;
-}
-
-.contact__details {
   position: relative;
+  font-size: clamp(1rem, 7vw, 5vh);
+  font-weight: 500;
 }
 
 .contact__details a::before {
@@ -646,7 +643,6 @@ footer {
     right: -2rem;
   }
 
-
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -659,7 +655,6 @@ footer {
 }
 
 @media (min-width: 1024px) {
-
   .hero__content {
     padding-bottom: 1rem;
   }
@@ -676,13 +671,12 @@ footer {
 
   .skills__container {
     min-height: 150vh;
-    max-width: 900px;
     margin-inline: auto;
     gap: 5rem;
   }
 
   .skill__back {
-    font-size: 8vw;
+    font-size: 7vw;
     opacity: 0.4;
   }
 
@@ -714,6 +708,7 @@ footer {
     padding-top: 0;
   }
   .skill__back[data-skill="css"] {
+    right: 15%;
     top: 35%;
   }
   
@@ -721,11 +716,7 @@ footer {
     padding-top: 600px;
   }
   .skill__back[data-skill="elementor"] {
-    bottom: 0;
+    bottom: 30%;
     right: -4rem;
-  }
-
-  .contact__details {
-    font-size: min(4vw, 3rem)
   }
 }
