@@ -124,7 +124,7 @@ body {
 }
 
 .primary-navigation li {
-  font-size: min(13vw, 4rem);
+  font-size: min(13vw, 10vh);
   font-weight: 700;
   color: var(--clr-light);
   transition: transform 0.3s ease-out;
