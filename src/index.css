@@ -503,11 +503,13 @@ body {
   min-height: 105vh;
   background-color: var(--clr-dark-green);
   opacity: 0;
+  padding-bottom: 2rem;
 }
 
 .about__title {
   color: var(--clr-light);
 }
+
 
 .about__content p {
   padding-bottom: 1.5rem;
