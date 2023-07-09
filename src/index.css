@@ -431,6 +431,7 @@ body {
 }
 
 .soft-skill {
+  display: block;
   color: var(--accent-clr);
 }
 
