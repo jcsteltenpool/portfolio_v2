@@ -18,7 +18,19 @@ export default function Skills() {
         <section id='skills' className={`wrapper skills__wrapper ${inViewport && 'active'}`} ref={viewPortRef}>
             
             <h2 className="section__title">Vaardigheden</h2>
-        
+
+            <Parallax speed={-5}
+                      opacity={[0.3, 1, 'easeOut']}>
+                <div className="skills-background__container">
+                    <span className="skill__back" data-skill="html">HTML5</span>
+                    <span  className="skill__back" data-skill="javascript">JavaScript</span>
+                    <span className="skill__back" data-skill="react">React</span>
+                    <span className="skill__back" data-skill="css">CSS3</span>
+                    <span className="skill__back" data-skill="elementor">Elementor</span> 
+            </div>
+            
+            </Parallax>
+
             {/* <div className="skills-background__container">
                 <Parallax speed={10}
                           opacity={[0.3, 1, 'easeOut']}>
