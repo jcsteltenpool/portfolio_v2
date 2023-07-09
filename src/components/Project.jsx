@@ -31,17 +31,15 @@ export default function Project ({ title, images, features, siteUrl, codeUrl, de
                 </ul>
             </div>
             <div className="project-button__container">
-                <a href={siteUrl} target="_blank" role='button' rel="noreferrer">
-                    <button className='button primary-button project-button'>
-                        <span>Ga naar site</span>
-                    </button>
+                <a href={siteUrl} target="_blank" role='button' rel="noreferrer"
+                    className='button primary-button project-button'>
+                    Ga naar site
                 </a>
                 {codeUrl && 
-                    <a href={codeUrl} target="_blank" role='button' rel="noreferrer">
-                    <button className='button secondary-button project-button'>
-                        <span>Bekijk code</span>
-                    </button>
-                </a> 
+                    <a href={codeUrl} target="_blank" role='button' rel="noreferrer"
+                                      className='button secondary-button project-button'>
+                            Bekijk code   
+                    </a> 
                 }
             </div>
         </section>
