@@ -159,6 +159,10 @@ body {
   .primary-navigation li:hover {
     transform: translateX(2rem);
   }
+
+  .back-to-top-button:hover {
+    transform: translateY(-0.45rem);
+  }
 }
 
 /* INTRO */
@@ -416,8 +420,12 @@ body {
   gap: 1rem;
 }
 
-.primary-button.project-button {
+.project-button {
   border: 2px solid var(--accent-clr);
+}
+
+.project-button:hover{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.25) 0 0);
 }
 
 /* SKILLS */
@@ -544,12 +552,16 @@ body {
   gap: 1rem;
 } 
 
-.about__content > .button__container > * {
+.about-button {
   color: var(--clr-light);
   width: 11rem;
   border: 2px solid var(--accent-clr);
 }
 
+.about-button:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0 0);
+
+}
 
 /* CONTACT */
 .contact__container{

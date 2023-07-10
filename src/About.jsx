@@ -41,11 +41,11 @@ export default function About(props) {
                         <p>Wil je meer over me weten?</p>
                         <div className="button__container">
                             <HashLink smooth to="#contact"
-                                    className='button primary-button'>
+                                    className='button primary-button about-button'>
                                 Neem contact op
                             </HashLink>
                             <a href="/CV Joost Steltenpool juli 2023.pdf" target="_blank" role='button' rel="noreferrer"
-                                className='button secondary-button'>
+                                className='button secondary-button about-button'>
                                 Bekijk mijn cv   
                             </a>
                         </div>
