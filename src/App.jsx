@@ -2,6 +2,7 @@ import { useState, useEffect} from 'react';
 import { useWindowSize } from "@uidotdev/usehooks";
 
 import Header from './Header';
+import BackToTop from './components/BackToTop';
 import Intro from './Hero';
 import Projects from './Projects';
 import Skills from './Skills';
@@ -13,9 +14,7 @@ import './App.css';
 
 export default function App() {
   const size = useWindowSize();
-  // console.log(size.height);
   
-  // eslint-disable-next-line no-unused-vars
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
@@ -43,6 +42,7 @@ export default function App() {
       <Header aboutTop={aboutTop}
               aboutHeight={aboutHeight}/>
       <main>
+        <BackToTop scrollTop={scrollTop}/>
         <Intro />
         <Projects />
         <Skills/>
