@@ -749,21 +749,22 @@ footer {
     z-index: -99;
     mix-blend-mode: multiply;
   }
-
+  
   .about-bg-img__container {
     width: 100%;
     height: 100%;
     opacity: 0.5;
   }
-
+  
   .about__bg-img {
+    filter: grayscale(100%);
     object-fit: cover;
     width: 100%;
     height: 100%;
   }
 
   .secondary-button.about-button {
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(6px);
   }
 }
 
@@ -784,8 +785,8 @@ footer {
 
   .skills__container {
     min-height: 150vh;
-    margin-inline: auto;
-    gap: 5rem;
+    /* margin-inline: auto; */
+    /* gap: 5rem; */
   }
 
   .skill__back {
@@ -796,7 +797,7 @@ footer {
     padding-bottom: 200px;
   }
   .skill__back[data-skill="html"] {
-    left: -4rem;
+    left: -2rem;
     top: 45%;
   }
   
@@ -811,10 +812,9 @@ footer {
   .skill__icon[data-skill="react"] {
     padding-bottom: 600px;
   }
-  /* .skill__back[data-skill="react"] {
-    bottom: 500px;
-    left: -160px;
-  } */
+  .skill__back[data-skill="react"] {
+    top: 200px;
+  }
   
   .skill__icon[data-skill="css"] {
     padding-top: 0;
@@ -829,7 +829,7 @@ footer {
   }
   .skill__back[data-skill="elementor"] {
     bottom: 30%;
-    right: -4rem;
+    right: -2rem;
   }
 
   /* .about__container {
