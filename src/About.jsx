@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useRef, useEffect } from "react";
 import { useInViewport} from 'react-in-viewport';
-import { Parallax } from "react-scroll-parallax";
 import { HashLink } from "react-router-hash-link";
 
 export default function About(props) {
@@ -31,13 +30,11 @@ export default function About(props) {
 
     return (
         <section id='about' className={`wrapper about__container ${inViewport && 'active'}`} ref={viewPortRef}>
-                <h2 className={`section__title about__title ${inViewport && 'active'}`}>Over mij</h2>
                 <div className="about-content__container">
                     <div>
+                    <h2 className={`section__title about__title ${inViewport && 'active'}`}>Over mij</h2>
                         <div className="about-img__container">
-                            <Parallax speed={-5}>
-                                <img className="about__img" src="/images/portretfoto_Joost_Steltenpool.webp"/>
-                            </Parallax>
+                            <img className="about__img" src="/images/portretfoto_Joost_Steltenpool.webp"/>
                         </div>
                     </div>
                     <div className="about-content">
