@@ -36,7 +36,7 @@ export default function About(props) {
                     <div>
                         <div className="about-img__container">
                             <Parallax speed={-5}>
-                                <img className="about__img" src="../public/images/portretfoto_Joost_Steltenpool.webp"/>
+                                <img className="about__img" src="/images/portretfoto_Joost_Steltenpool.webp"/>
                             </Parallax>
                         </div>
                     </div>
