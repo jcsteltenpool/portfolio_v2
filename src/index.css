@@ -90,10 +90,13 @@ body {
 }
 
 .portrait__img {
-  height: 60px;
   clip-path: circle(45%);
-  filter: grayscale(100%);
   opacity: 0.9;
+}
+
+.button__img {
+  height: 60px;
+  filter: grayscale(100%);
 }
 
 .back-to-top-button {
@@ -102,6 +105,8 @@ body {
   right: 0.75rem;
   width: 3rem;
   aspect-ratio: 1;
+  display: grid;
+  place-items: center;
   background-color: var(--accent-clr);
   transform: translateX(130%);
   transition: transform 350ms ease-out;
@@ -109,8 +114,7 @@ body {
 }
 
 .back-to-top-button > svg {
-  width: 100%;
-  height: 100%;
+  width: 70%;
   fill: var(--clr-light);
 }
 
@@ -539,30 +543,61 @@ body {
   opacity: 0;
   padding-bottom: 2rem;
 }
+/* .about__img {
+  mix-blend-mode: luminosity;
+} */
 
 .about__title {
   color: var(--clr-light);
 }
 
+.about-content__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
-.about__content p {
+.about-content p {
   padding-bottom: 1.5rem;
 }
 
-.about__content > .button__container {
+.about-content > .button__container {
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 } 
 
 .about-button {
+  font-size: clamp(12px, 4vw, 1rem);
   color: var(--clr-light);
   width: 11rem;
+  width: clamp(115px, 43vw, 11rem);
   border: 2px solid var(--accent-clr);
 }
 
-/* CONTACT */
+.about-content__container > :nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img__container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  width: min(80%, 20rem);
+  aspect-ratio: 1;
+}
+
+.about__img {
+  padding-top: 6rem;
+}
+
+/* CONTACT 
+////////////////////////////////*/
 .contact__container{
   margin-top: 2rem;
   height: calc((100vh - 56px));
@@ -619,7 +654,8 @@ body {
   width: 100%;
 }
 
-/* FOOTER */
+/* FOOTER 
+////////////////////////////////*/
 footer {
   margin-top: auto;
   width: 100%;
@@ -629,11 +665,9 @@ footer {
   text-align: center;
 }
 
-/* ANIMATIONS */
 
-
-
-/* MEDIA QUERIES */
+/* MEDIA QUERIES 
+///////////////////////////////*/
 
 @media (min-width: 768px) {
   .hero__container {
@@ -689,14 +723,29 @@ footer {
     right: -2rem;
   }
 
-  .about__content__wrapper {
+  .about-content__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    padding: 1rem 3rem 2rem 3rem;
   }
-  .about__content {
+
+  .about-content {
     grid-column: 2;
-    padding: 1rem 3rem 2rem 0;
+  }
+
+  .about-img__container {
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 50%;
+    width: 80%;
+    max-width: 20rem;
+    aspect-ratio: 1;
+  }
+  
+  .about__img {
+    padding-top: 6rem;
   }
 }
 
@@ -765,8 +814,8 @@ footer {
     right: -4rem;
   }
 
-  .about__content {
-    grid-column: 2;
-    padding: 1rem 6rem 2rem 0;
+  .about__content__wrapper {
+    
+    padding: 1rem 6rem 2rem 3rem;
   }
 }

@@ -6,7 +6,7 @@ import { ReactComponent as ArrowUp } from '../assets/svg/arrowUp.svg';
 export default function BackToTop({ scrollTop }) {
     return (
         <HashLink smooth to="#"
-                  className={`back-to-top-button ${scrollTop >= 2300 ? 'active' : ''}`}>
+                  className={`back-to-top-button ${scrollTop >= 1500 ? 'active' : ''}`}>
             <ArrowUp />
         </HashLink>
     )
