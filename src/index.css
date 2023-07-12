@@ -70,8 +70,9 @@ body {
 
 .button__container {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fit,
-                         minmax(10rem, 1fr));
+                         minmax(9rem, 1fr));
   gap: 1rem;
 }
 
@@ -559,10 +560,6 @@ body {
 
 .about-content {
   padding-bottom: 4rem;
-}
-
-.about-content .button__container {
-  max-width: 24rem;
 } 
 
 .about-button {
@@ -654,6 +651,10 @@ footer {
 @media (min-width: 425px) {
   .projects__wrapper {
     padding-inline: 1rem;
+  }
+
+  .about-content .button__container {
+    max-width: 24rem;
   }
 }
 
