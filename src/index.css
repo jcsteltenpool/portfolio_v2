@@ -459,7 +459,6 @@ body {
 .skill__icon {
   fill: var(--accent-clr);
   width: 16vw;
-  max-width: 7rem;
   z-index: 99;
 }
 
@@ -490,7 +489,7 @@ body {
   padding-bottom: 200px;
 }
 .skill__back[data-skill="html"] {
-  left: -1rem;
+  left: -.5rem;
   top: 40%;
 }
 
@@ -541,12 +540,13 @@ body {
 .about__container {
   position: relative;
   color:#edeae1;
-  min-height: 105vh;
+  min-height: 100vh;
   background-color: var(--clr-dark-green);
   opacity: 0;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  isolation: isolate;
 }
 
 .about__title {
@@ -558,6 +558,10 @@ body {
   padding-bottom: 1.5rem;
 }
 
+.about-content p:first-of-type {
+  padding-top: 2rem;
+}
+
 .about-content {
   padding-bottom: 4rem;
 } 
@@ -565,15 +569,20 @@ body {
 .about-button {
   color: var(--clr-light);
   border: 2px solid var(--accent-clr);
+  backdrop-filter: blur(4px);
 }
 
 .about__img {
-  padding: 1rem 0;
-  margin-inline: auto;
-  width: min(80%, 20rem);
-  clip-path: circle(45%);
-  opacity: 0.8;
-  mix-blend-mode: luminosity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%);
+  z-index: -99;
 }
 
 /* CONTACT 
@@ -658,19 +667,6 @@ footer {
   }
 }
 
-@media (min-width: 560px) {
-  .about-content p:first-of-type {
-    padding-top: 1.5rem;
-  }
-
-  .about__img {
-    margin-inline: 0;
-    margin: 0.2rem;
-    float: right;
-    shape-outside: circle(147px at 138px 180px);
-  }
-}
-
 @media (min-width: 768px) {
   .hero__container {
     padding: 4rem 1rem;
@@ -726,10 +722,8 @@ footer {
   }
 
   .about__container {
-    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    isolation: isolate;
   }
 
   .about-content {
@@ -769,10 +763,6 @@ footer {
     width: 100%;
     height: 100%;
   }
-
-  .secondary-button.about-button {
-    backdrop-filter: blur(6px);
-  }
 }
 
 @media (min-width: 1024px) {
@@ -785,7 +775,7 @@ footer {
   }
 
   .projects__container {
-    gap: 6rem;
+    gap: 4rem;
     margin-inline: auto;
     max-width: 900px;
   }
@@ -804,7 +794,7 @@ footer {
     padding-bottom: 200px;
   }
   .skill__back[data-skill="html"] {
-    left: -2rem;
+    right: 0;
     top: 45%;
   }
   
@@ -838,10 +828,6 @@ footer {
     bottom: 30%;
     right: -2rem;
   }
-
-  /* .about__container {
-    padding-bottom: 5rem;
-  } */
 
   .about-content__container > :nth-child(1) {
     top: 2rem;
