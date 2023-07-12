@@ -30,7 +30,7 @@ export default function Project ({ title, images, features, siteUrl, codeUrl, de
                     )}
                 </ul>
             </div>
-            <div className="project-button__container">
+            <div className="button__container">
                 <a href={siteUrl} target="_blank" role='button' rel="noreferrer"
                     className='button primary-button project-button'>
                     Ga naar site

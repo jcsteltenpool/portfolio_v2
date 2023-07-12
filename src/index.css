@@ -16,6 +16,7 @@
   --menu-clr: var(--body-clr);
   --accent-clr: var(--clr-green);
   --primary-button-clr: var(--accent-clr);
+  --secondary-button-clr: var(--clr-light);
 
   color: var(--body-clr);
   background-color: var(--background-clr);
@@ -25,7 +26,10 @@
   :root {
     --body-clr: var(--clr-dark);
     --background-clr: var(--clr-light);
-  }  
+  }
+  .secondary-button.project-button {
+    color: var(--accent-clr);
+  }
 }
 
 body {
@@ -59,8 +63,21 @@ body {
 }
 
 .secondary-button {
-  color: var(--clr-green);
+  color: var(--secondary-button-clr);
   background-color: var(--clr-light-green);
+  border: 2px solid var(--accent-clr);
+}
+
+.button__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,
+                         minmax(10rem, 1fr));
+  gap: 1rem;
+}
+
+.project-button,
+.about-button {
+  padding: 8px;
   border: 2px solid var(--accent-clr);
 }
 
@@ -212,7 +229,7 @@ body {
 
 .hero__wrapper {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
   padding: 4rem 0.5rem 3rem;
   overflow: hidden;
   display: flex;
@@ -333,7 +350,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 2rem 1rem 3rem;
+  padding: 2rem 0 3rem;
 }
 
 .project:nth-child(even) {
@@ -351,7 +368,7 @@ body {
   width: 100%;
   max-width: 500px;
   opacity: 0;
-  transform: translateY(2rem);
+  transform: translateY(3rem);
   transition: opacity 0.5s ease-out,
               transform 0.5s ease-out;
 }
@@ -419,24 +436,6 @@ body {
   left: 0;
   width: 1.1rem;
   aspect-ratio: 1;
-}
-
-.project-button__container {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.project-button,
-.about-button {
-  padding: 8px;
-  font-size: clamp(12px, 4.5vw, 1rem);
-  width: clamp(100px, 35vw, 11rem);
-  border: 2px solid var(--accent-clr);
 }
 
 /* SKILLS */
@@ -563,26 +562,21 @@ body {
 }
 
 .about-content .button__container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  max-width: 24rem;
 } 
 
 .about-button {
-  font-size: clamp(12px, 4vw, 1rem);
   color: var(--clr-light);
-  width: 11rem;
-  width: clamp(115px, 43vw, 11rem);
   border: 2px solid var(--accent-clr);
 }
 
 .about__img {
+  padding: 1rem 0;
   margin-inline: auto;
   width: min(80%, 20rem);
   clip-path: circle(45%);
   opacity: 0.8;
+  mix-blend-mode: luminosity;
 }
 
 /* CONTACT 
@@ -657,10 +651,22 @@ footer {
 
 /* MEDIA QUERIES 
 ///////////////////////////////*/
-@media (max-width: 320px) {
-  .project-button,
-  .about-button {
-    width: 100%;
+@media (min-width: 425px) {
+  .projects__wrapper {
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 560px) {
+  .about-content p:first-of-type {
+    padding-top: 1.5rem;
+  }
+
+  .about__img {
+    margin-inline: 0;
+    margin: 0.2rem;
+    float: right;
+    shape-outside: circle(147px at 138px 180px);
   }
 }
 
