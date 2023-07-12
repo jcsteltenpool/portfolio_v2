@@ -39,7 +39,7 @@ export const projectsData = [{
             'Gebouwd in React',
             'Verbinding met Spotify API: OAuth 2.0 en Fetch API',
             'Van class components naar function components', 
-            'Extra feature ingebouwd: preview tracks luisteren en de voortgang van een animatie voorzien'
+            'Extra feature: preview tracks met geanimeerde voortgang'
         ]
     }
 ]
