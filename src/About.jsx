@@ -12,7 +12,6 @@ export default function About(props) {
     
     let options = {       
         treshold: 0.5 
-        // threshold: [0, 0.25, 0.5, 0.75, 1]
     };
 
     const {
@@ -36,7 +35,7 @@ export default function About(props) {
                     <h2 className={`section__title about__title ${inViewport && 'active'}`}>Over mij</h2>
                 <div className="about-content">
                     {isMobile &&
-                        <img className="about__img" src="/images/portretfoto_Joost_Steltenpool.webp" alt="Portretfoto van Joost Steltenpool"/>
+                        <img className="about__img" src="/images/portretfoto_Joost_square.webp" alt="Portretfoto van Joost Steltenpool"/>
                     }
                     <p>In het werk als front-end developer komt alles samen waar ik blij van word: creatief bezig zijn, problemen oplossen, verbindingen leggen en net zolang puzzelen tot elke pixel op de juiste plaats staat.</p>          
                     <p>Van jongs af aan ben ik een echte maker. Als kind was ik altijd aan het tekenen en schilderen en later richtte ik mij meer op het schrijven, spelen en maken van theater, muziek en liedteksten.
@@ -49,7 +48,7 @@ export default function About(props) {
                                 className='button primary-button about-button'>
                             Neem contact op
                         </HashLink>
-                        <a href="/CV Joost Steltenpool juli 2023.pdf" target="_blank" role='button' rel="noreferrer"
+                        <a href="/CV Joost Steltenpool april 2024.pdf" target="_blank" role='button' rel="noreferrer"
                             className='button secondary-button about-button'>
                             Bekijk mijn cv   
                         </a>
@@ -58,7 +57,7 @@ export default function About(props) {
                 {!isMobile &&
                     <div className="parallax__container">
                         <Parallax speed={-10} className="about-bg-img__container">
-                            <img className="about__bg-img" src="/images/portretfoto_Joost_Steltenpool.webp" alt="Portretfoto van Joost Steltenpool"/>
+                            <img className="about__bg-img" src="/images/portretfoto_Joost_square.webp" alt="Portretfoto van Joost Steltenpool"/>
                         </Parallax>
                     </div>
                 }

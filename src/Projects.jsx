@@ -7,8 +7,6 @@ import { projectsData } from "./assets/projectsData";
 
 export default function Projects() {
     const viewPortRef = useRef();
-    
-    // let options = { treshold: 0.5 };
     const { inViewport } = useInViewport(viewPortRef,);
 
     return (

@@ -121,7 +121,8 @@ body {
 
 .header__container {
   width: 100%;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 999;
   align-items: center;
   justify-content: flex-end;
@@ -152,6 +153,11 @@ body {
   font-weight: 700;
   color: var(--clr-light);
   transition: transform 0.3s ease-out;
+}
+
+.nav-link {
+  display: block;
+  width: 100%;
 }
 
 @media(hover: hover) {
@@ -672,7 +678,7 @@ footer {
   }
 
   .primary-navigation {
-    padding-left: 2rem;
+    padding-inline: 2rem;
   }
 
   .hero__wrapper {

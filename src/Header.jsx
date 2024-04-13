@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { NavHashLink } from 'react-router-hash-link';
 import './Header.css'
+import { useLockScroll } from './hooks/useLockScroll';
 
 export default function Header(props) {
     const { aboutTop, aboutHeight } = props;
@@ -10,6 +11,8 @@ export default function Header(props) {
     function handleClick() {
         setVisible(!visible);
     }
+
+    useLockScroll(visible);
     
     return (
         <header className="header__container flex">
@@ -42,25 +45,25 @@ export default function Header(props) {
                     data-visible={visible} className="primary-navigation flex">
                     <li>
                         <NavHashLink to="#projects"
-                                     onClick={handleClick}>
+                                     onClick={handleClick} className="nav-link">
                             Projecten
                         </NavHashLink>
                     </li>
                     <li>
                         <NavHashLink to="#skills"
-                                     onClick={handleClick}>
+                                     onClick={handleClick} className="nav-link">
                             Vaardigheden
                         </NavHashLink>
                     </li>
                     <li>
                         <NavHashLink to="#about"
-                                     onClick={handleClick}>
+                                     onClick={handleClick} className="nav-link">
                             Over mij
                         </NavHashLink>
                     </li>
                     <li>
                         <NavHashLink to="#contact"
-                                     onClick={handleClick}>
+                                     onClick={handleClick} className="nav-link">
                             Contact
                         </NavHashLink>
                     </li>
